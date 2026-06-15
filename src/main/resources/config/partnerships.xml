@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<partnerships>
+	<partner name="ROBIN" as2_id="ROBIN" x509_alias="OpenAS2A_alias" email="ROBIN A email"/>
+	<partner name="JHAH" as2_id="JHAH" x509_alias="OpenAS2B_alias" email="JHAH B email"/>	
+
+	<partnership name="ROBIN-JHAH">
+		<sender name="ROBIN"/>
+		<receiver name="JHAH"/>
+		<attribute name="protocol" value="as2"/>
+		<attribute name="subject" value="From ROBIN to JHAH"/>
+		<attribute name="as2_url" value="http://192.168.1.103:10080"/>
+		<attribute name="as2_mdn_to" value="http://192.168.1.103:10080"/>
+		<attribute name="as2_mdn_options" value="signed-receipt-protocol=optional, pkcs7-signature; signed-receipt-micalg=optional, md5"/>
+		<attribute name="encrypt" value="3des"/>
+		<attribute name="sign" value="md5"/>
+	</partnership>
+	
+	<partnership name="JHAH-ROBIN">
+		<sender name="JHAH"/>
+		<receiver name="ROBIN"/>
+		<attribute name="protocol" value="as2"/>
+		<attribute name="subject" value="From JHAH to ROBIN"/>
+		<attribute name="as2_url" value="http://192.168.1.103:10080"/>
+		<attribute name="as2_mdn_to" value="http://192.168.1.103:10080"/>
+		<attribute name="as2_mdn_options" value="signed-receipt-protocol=optional, pkcs7-signature; signed-receipt-micalg=optional, sha1"/>
+		<attribute name="encrypt" value="3des"/>
+		<attribute name="sign" value="sha1"/>
+	</partnership>
+</partnerships>
+
